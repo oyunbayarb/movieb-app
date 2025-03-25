@@ -94,11 +94,10 @@ export const GenreBox = () => {
             See lists of movies by genre
           </p>
           <div className="flex-wrap flex gap-[5px]">
-            {GenreListData.map((element, index) => {
+            {GenreListData.map((element) => {
               return (
-                <button className="min-w-[120px] flex justify-evenly p-[2px] border-2 border-[#E4E4E7] rounded-full">
+                <button className="min-w-[115px] flex justify-evenly p-[2px] border-2 border-[#E4E4E7] rounded-full">
                   {element.name}
-                  key={index}
                   <ChevronRight />
                 </button>
               );

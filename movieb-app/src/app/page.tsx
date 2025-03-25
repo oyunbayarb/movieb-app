@@ -1,13 +1,23 @@
-import { Header, UpcomingMovie } from "@/components";
+import {
+  Footer,
+  Header,
+  NowPlayingMovie,
+  PopularMovie,
+  TopratedMovie,
+  UpcomingMovie,
+} from "@/components";
 
 export default function Home() {
   return (
-    <div className="flex-col">
+    <div>
       <Header />
-
-      <div className="flex p-20">
+      <div className="flex-col p-20 flex gap-8">
+        <NowPlayingMovie />
         <UpcomingMovie />
+        <PopularMovie />
+        <TopratedMovie />
       </div>
+      <Footer />
     </div>
   );
 }

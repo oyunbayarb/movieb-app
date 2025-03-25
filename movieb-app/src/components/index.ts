@@ -2,3 +2,7 @@ export * from "./Header";
 export * from "./GenreComponent";
 export * from "./MovieCardComponent";
 export * from "./UpcomingMovieSection";
+export * from "./PopularMovieSection";
+export * from "./TopratedMovieSection";
+export * from "./FooterSection";
+export * from "./NowPlayingSection";
