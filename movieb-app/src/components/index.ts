@@ -6,3 +6,4 @@ export * from "./PopularMovieSection";
 export * from "./TopratedMovieSection";
 export * from "./FooterSection";
 export * from "./NowPlayingSection";
+export * from "./NowPlayingSlideSection";
