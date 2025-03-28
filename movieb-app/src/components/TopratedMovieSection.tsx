@@ -358,7 +358,7 @@ export const TopratedMovie = () => {
         </button>
       </div>
       <div className="flex flex-wrap gap-8">
-        {TopratedMovieData.map((Element, index) => {
+        {TopratedMovieData.slice(0, 10).map((Element, index) => {
           return (
             <OneMovieCard
               imageSrc={imageRenderer(Element.poster_path)}

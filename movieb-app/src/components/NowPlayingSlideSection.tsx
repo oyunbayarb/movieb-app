@@ -7,13 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Dot } from "lucide-react";
 
-export const NowPlayingSlide = ({
-  backgroundSrc,
-}: {
-  backgroundSrc: string;
-}) => {
+import Image from "next/image";
+import { Ellipsis } from "lucide-react";
+
+export const NowPlayingSlide = () => {
   const nowPlayingSlideData = [
     {
       adult: false,
@@ -101,31 +99,31 @@ export const NowPlayingSlide = ({
       vote_count: 0,
     },
   ];
+  const imageRenderer = (imgPath: string) => {
+    const baseURL = "https://image.tmdb.org/t/p/original";
+    return baseURL + imgPath;
+  };
 
-  const [changeBackground, setChangeBackground] = useState();
   return (
-    <div className="flex w-screen h-[600px] justify-center items-end">
-      <div className="w-full h-full">
-        <Carousel className="w-full h-full bg-amber-400">
-          <CarouselContent className="flex relative">
-            <CarouselItem>Hello</CarouselItem>
-            <CarouselItem>Hello</CarouselItem>
-            <CarouselItem>Hello</CarouselItem>
-            <CarouselItem>Hello</CarouselItem>
-            <CarouselItem>Hello</CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious className="flex absolute left-10 size-10" />
-          <CarouselNext className="flex absolute right-10 size-10" />
-        </Carousel>
-      </div>
-
-      <div className="flex absolute">
-        <Dot className="size-10 text-white" />
-        <Dot className="size-10 text-white" />
-        <Dot className="size-10 text-white" />
-        <Dot className="size-10 text-white" />
-        <Dot className="size-10 text-white" />
-      </div>
-    </div>
+    <Carousel className="w-screen h-[800px]">
+      <CarouselContent className="w-screen h-[800px]">
+        {nowPlayingSlideData.map((Element, index) => {
+          return (
+            <CarouselItem key={index} className="flex w-screen h-[800px]">
+              <Image
+                className="w-screen h-[800px]"
+                width={1440}
+                height={600}
+                src={`https://image.tmdb.org/t/p/original${Element.poster_path}`}
+                alt="poster"
+              />
+            </CarouselItem>
+          );
+        })}
+        <Ellipsis className="absolute" />;
+      </CarouselContent>
+      <CarouselPrevious className="flex absolute left-10 size-10" />
+      <CarouselNext className="flex absolute right-10 size-10" />
+    </Carousel>
   );
 };

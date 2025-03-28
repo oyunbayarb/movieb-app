@@ -17,7 +17,6 @@ export const Header = () => {
           <input className="outline-none"></input>
         </div>
       </div>
-
       <img src="./Modes.png" alt="darkMode"></img>
     </div>
   );

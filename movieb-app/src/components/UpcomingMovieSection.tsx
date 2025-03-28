@@ -359,7 +359,7 @@ export const UpcomingMovie = () => {
         </button>
       </div>
       <div className="flex flex-wrap gap-8">
-        {UpcomingMovieData.map((Element, index) => {
+        {UpcomingMovieData.slice(0, 10).map((Element, index) => {
           return (
             <OneMovieCard
               imageSrc={imageRenderer(Element.poster_path)}

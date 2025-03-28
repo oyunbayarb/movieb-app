@@ -1,11 +1,9 @@
 export const OneMovieCard = ({
   imageSrc,
-  movieScore,
   movieTitle,
   releaseDate,
 }: {
   imageSrc: string;
-  movieScore: number;
   movieTitle: string;
   releaseDate: string;
 }) => {
