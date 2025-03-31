@@ -7,4 +7,4 @@ export * from "./TopratedMovieSection";
 export * from "./FooterSection";
 export * from "./NowPlayingSection";
 export * from "./NowPlayingSlideSection";
-export * from "./DetailPageSection";
+export * from "./OneMovieDetailPage";
