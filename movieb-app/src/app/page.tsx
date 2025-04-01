@@ -15,11 +15,10 @@ export default function Home() {
       <Header />
 
       <div className="flex-col p-20 flex gap-8">
-        <OneMovieDetailPage />
-        {/* <NowPlayingMovie />
+        <NowPlayingMovie />
         <UpcomingMovie />
         <PopularMovie />
-        <TopratedMovie /> */}
+        <TopratedMovie />
       </div>
       <Footer />
     </div>

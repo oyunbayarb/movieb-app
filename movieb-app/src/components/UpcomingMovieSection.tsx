@@ -362,6 +362,7 @@ export const UpcomingMovie = () => {
         {UpcomingMovieData.slice(0, 10).map((Element, index) => {
           return (
             <OneMovieCard
+              id={Element.id}
               imageSrc={imageRenderer(Element.poster_path)}
               movieTitle={Element.title}
               releaseDate={Element.release_date}
